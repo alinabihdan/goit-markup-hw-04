@@ -79,9 +79,12 @@ a {
 }
 
 .link {
-    display: block;
+    display: flex;
+    align-items: center;
+
     padding-top: 32px;
     padding-bottom: 32px;
+
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.14;
@@ -125,17 +128,22 @@ a {
     margin-right: 10px;
 }
 
-.contacts-link {
-    display: flex;
-    align-items: center;
-}
     
 /* HERO */
 
 .hero {
-    background-color: var(--footer-bg-color);
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
     text-align: center;
     padding: 200px 0;
+    background-color: var(--footer-bg-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/bg.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .hero__title {
@@ -483,12 +491,20 @@ a {
     flex-wrap: wrap;
 }
 
+.portfolio__link {
+    display: block;
+}
+
+.portfolio__link:hover,
+.portfolio__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-item {
     width: calc((100% - 60px)/ 3);
     margin-right: 30px;
     margin-bottom: 30px;
     background-color: #ffffff;
-    border: 1px solid #EEEEEE;
 }
 
 .portfolio-item:nth-child(3n) {
@@ -506,6 +522,9 @@ a {
 
 .card-description {
     padding: 20px 24px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .portfolio__title {
