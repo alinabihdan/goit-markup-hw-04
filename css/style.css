@@ -7,6 +7,7 @@
     --footer-bg-color: #2F303A;
     --footer-text-color: rgba(255, 255, 255, 0.6);
     --black-color: #000000;
+    --icons-color: #AFB1B8;
 }
 
 body {
@@ -78,19 +79,17 @@ a {
 }
 
 .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.14;
+    color: var(--primary-text-color);
 }
 
 .nav-item > .link {
     color: var(--title-text-color);
-}
-
-.link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .nav-item + .nav-item {
@@ -116,15 +115,21 @@ a {
     margin-left: 50px;
 }
 
-.contacts-item > .link {
-    color: inherit;
-}
-
 .contacts-item > .link:hover,
 .contacts-item > .link:focus {
     color: var(--accent-color);
 }
 
+.icon-contacts {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contacts-link {
+    display: flex;
+    align-items: center;
+}
+    
 /* HERO */
 
 .hero {
@@ -134,8 +139,11 @@ a {
 }
 
 .hero__title {
+    max-width: 696px;
     margin-top: 0;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--main-light-color);
     font-weight: 900;
     font-size: 44px;
@@ -192,6 +200,34 @@ a {
     line-height: 1.71;
 }
 
+.features-item::before {
+    content: '';
+    display: block;
+    height: 120px;
+    background-color: var(--accent-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-position: center;
+}
+
+.features-item.icon-antenna::before {
+    background-image: url('../images/antenna.svg');
+}
+
+.features-item.icon-clock::before {
+    background-image: url('../images/clock.svg');
+}
+
+.features-item.icon-diagram::before {
+    background-image: url('../images/diagram.svg');
+}
+
+.features-item.icon-astronaut::before {
+    background-image: url('../images/astronaut.svg');
+}
+
 .what-we-do-list {
     display: flex;
 }
@@ -245,7 +281,7 @@ a {
 }
 
 .member-description {
-    padding: 30px 0;
+    padding: 30px 15px;
 }
 
 .member-name {
@@ -256,7 +292,74 @@ a {
 }
 
 .member-role {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.card-social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.card-social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--icons-color);
+}
+
+.card-social-link:hover,
+.card-social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--main-light-color);
+}
+
+
+/* SECTION CLIENTS */
+
+.clients {
+    padding: 94px 0;
+    text-align: center;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-item {
+    width: 170px;
+    height: 90px;
+    
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    color: var(--icons-color);
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
+.clients-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* FOOTER */
@@ -284,7 +387,53 @@ a {
     font-style: normal;
 }
 
+.footer-box {
+    display: flex;
+}
+
+.join-box {
+    margin-left: 70px;
+}
+
+.join__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--main-light-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.social-link-list {
+    display: flex;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-light-color);
+}
+
+.social-link-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-link-icon {
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+}
+
 /* PORTFOLIO PAGE */
+
 .portfolio {
     padding: 94px 0;
 }
