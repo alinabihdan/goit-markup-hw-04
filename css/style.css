@@ -340,14 +340,16 @@ a {
 
 .clients-list {
     display: flex;
-    justify-content: space-between;
 }
 
 .clients-item {
     width: 170px;
     height: 90px;
-    
 }
+
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}   
 
 .clients-link {
     display: flex;
@@ -397,6 +399,7 @@ a {
 
 .footer-box {
     display: flex;
+    align-items: baseline;
 }
 
 .join-box {
